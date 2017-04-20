@@ -1,0 +1,20 @@
+1. humKer_Sub_D2D8_merge.Rds.gz -> D0_D2D8_merge_w_chrM.bed.gz (Chicago)
+2. D0_D2D8_merge_w_chrM.bed.gz -> D0_D2D8_merge.bed.gz (remove_chrM.sh) 
+
+For bait-bait:
+1. D0_D2D8_merge.bed.gz -> D0_D2D8_merge_BaitToBait.txt (get_baits.sh)
+2. for D0_D2D8_merge_BaitToBait.txt
+   check_if_baits.ipynb - ALL SITES ARE BAITS!!!!!
+3. D0_D2D8_merge_BaitToBait.txt -> D0_D2D8_merge_BaitToBait.bed (get_bed_from_IDs_txt.sh/get_bed_from_IDs_txt.py, get_bed_from_IDs_txt.ipynb)
+4. D0_D2D8_merge_BaitToBait.bed -> D0_D2D8_merge_BaitToBait_intra.bed (get_intra.sh)
+
+For enhancers:
+1. Digest_Human_HindIII.6col.bed -> Enhc_Digest_Human_HindIII_ID.bed (get_enhc_digest_human_hind3.sh)
+
+For bait-other   
+1. D0_D2D8_merge.bed.gz -> D0_D2D8_merge_BaitToOther.txt(get_bait-other.sh)
+2. for D0_D2D8_merge_BaitToOther.txt
+   check_which_site_is_bait.ipynb - SITE1 IS BAIT!!!!!
+3. D0_D2D8_merge_BaitToOther.txt -> D0_D2D8_merge_BaitToE.txt (get_baitToE.sh/get_baitToE.py)
+4. D0_D2D8_merge_BaitToE.txt -> D0_D2D8_merge_BaitToE.bed (get_bed_from_IDs_txt.sh/get_bed_from_IDs_txt.py, get_bed_from_IDs_txt.ipynb) 
+5. D0_D2D8_merge_BaitToE.bed -> D0_D2D8_merge_BaitToE_intra.bed (get_intra.sh)
