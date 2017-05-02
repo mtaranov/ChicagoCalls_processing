@@ -7,5 +7,5 @@ output_Enhc_Digest_Human_HindIII_file='/mnt/lab_data/kundaje/mtaranov/ChicagoCal
 tmp='/mnt/lab_data/kundaje/mtaranov/ChicagoCalls/tmp.bed'
 
 /software/miniconda3/bin/bedtools intersect -wa -a $Digest_Human_HindIII -b $H3K4me1_file $H3K27ac_file | sort -k5,5n| uniq | perl -p -e 's/ /\t/g' > $tmp
-/software/miniconda3/bin/bedtools intersect -wa -a $tmp -b $PromoterCapture_file -v | awk '{print $1, $2, $3, $5}' | perl -p -e 's/ /\t/g' > $output_Enhc_Digest_Human_HindIII_file
+/software/miniconda3/bin/bedtools intersect -wa -a $tmp -b $PromoterCapture_file -v | awk '{print $1, $2, $3, $5, "1"}' | perl -p -e 's/ /\t/g' > $output_Enhc_Digest_Human_HindIII_file
 
