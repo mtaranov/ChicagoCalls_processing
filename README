@@ -1,3 +1,9 @@
+RDS with Chicago
+library(Chicago)
+kc0 = readRDS("humKer_Sub_D2D8_merge.Rds")
+head(kc0@x)
+write.table(kc0@x, file="1.bed")
+
 1. Digest_Human_HindIII.6col_XY-4.bed -> Digest_Human_HindIII.6col.bed (add4_toChrXY.sh)
 2. Enhc_Digest_Human_HindIII_ID_XY-4.bed -> Enhc_Digest_Human_HindIII_ID.bed (add4_toChrXY.sh)
 3. humKer_Sub_D2D8_merge.Rds.gz -> D0_D2D8_merge_w_chrM.bed.gz (Chicago)
